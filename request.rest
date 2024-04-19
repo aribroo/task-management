@@ -1,0 +1,66 @@
+POST http://localhost:4000/api/users/register
+Content-Type: application/json
+
+{
+   "username" : "rifkiari",
+   "password" : "ari123"
+}
+
+###
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+   "username" : "rifkiari",
+   "password" : "ari123"
+}
+
+###
+GET http://localhost:3000/api/users/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6InJpZmtpYXJpIiwiZW1haWwiOiJyaWZraWFyaTEyM0BnbWFpbC5jb20iLCJpYXQiOjE3MTIxMzY3NjYsImV4cCI6MTcxMjEzNjc5Niwic3ViIjoicmlma2lhcmkifQ.-K4u1zXnHoX_NAu1siB2c1iEpkWE-5cE9nbIQIficg4
+
+###
+GET http://localhost:3000/api/token/refresh
+Content-Type: application/json
+Cookie: : refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6InJpZmtpYXJpIiwiZW1haWwiOiJyaWZraWFyaTEyM0BnbWFpbC5jb20iLCJpYXQiOjE3MTIxMzcyMTQsImV4cCI6MTcxMjIyMzYxNCwic3ViIjoicmlma2lhcmkifQ.IVC7KwFeXt_a3DZl0bIth-bHD6xogNsGNpdX8xovvZ0
+
+
+
+
+
+
+
+
+
+### 
+POST http://localhost:4000/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJyaWZraWFyaSIsImlhdCI6MTcxMzUyMDI0NywiZXhwIjoxNzEzNjA2NjQ3fQ.Wuy4C5wUBz_ZtibLTBEE0X0fyope7mYEwPGbiC8-nMk
+
+{
+   "title" : "tes",
+   "description" : "testing"
+}
+
+###
+GET http://localhost:4000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJyaWZraWFyaSIsImlhdCI6MTcxMzUxNjk0NCwiZXhwIjoxNzE2MTA4OTQ0fQ.GWIKXzFFRWhYg_prYwAvW3p377o7MTb3Sc_xkqeHgmI
+
+###
+GET http://localhost:4000/api/tasks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJyaWZraWFyaSIsImlhdCI6MTcxMzUxNjk0NCwiZXhwIjoxNzE2MTA4OTQ0fQ.GWIKXzFFRWhYg_prYwAvW3p377o7MTb3Sc_xkqeHgmI
+
+###
+PUT http://localhost:4000/api/tasks/11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJyaWZraWFyaSIsImlhdCI6MTcxMzUxNjk0NCwiZXhwIjoxNzE2MTA4OTQ0fQ.GWIKXzFFRWhYg_prYwAvW3p377o7MTb3Sc_xkqeHgmI
+
+{
+   "title" : "update task",
+   "description" : "update task"
+}
+
+###
+DELETE http://localhost:4000/api/tasks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJyaWZraWFyaSIsImlhdCI6MTcxMzUxNjk0NCwiZXhwIjoxNzE2MTA4OTQ0fQ.GWIKXzFFRWhYg_prYwAvW3p377o7MTb3Sc_xkqeHgmI
